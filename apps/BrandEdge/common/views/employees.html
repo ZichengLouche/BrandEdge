@@ -1,0 +1,32 @@
+<div class="view-employee" style="height: 100%;">
+    <alert type="{{alert.type}}" ng-if="alert" style="margin-top: 1rem;">{{alert.msg}}</alert>
+	<div data-dw-loading="loading" style="height: 100%;" data-dw-loading-options="$root.spinnerOptions">
+        <div class="row" style="height: 100%;">
+            <div class="col-lg-3 col-donut">
+                <div class="donut-label be-font-18 be-font-light">
+                <span>{{donut.label}}</span>
+                <!-- Grey out Employee Information -->
+                <span ng-if="donut.subLabel" class="be-font-10" style="white-space:nowrap"><br>{{donut.subLabel}}</span>
+                </div>
+                <div class="clearfix"></div>
+                <div
+                    data-be-donut=""
+                    data-be-id="employee-donut"
+                    data-be-data="donut"
+                    data-be-config="config"
+                    data-be-broadcast="false"
+                    class="donut">
+                </div>
+            </div>
+            <div class="col-lg-9 col-donut-chart">
+                <div class="donut-chart-details">
+                    <div class="info-left">
+                        <div class="row-details be-font-12" data-ng-repeat="row in donut.details">
+                            <a class="icon {{ row.color | iconcheck: true }}" href="#" ></a><div data-be-title-tooltip data-be-description="row.icon" class="name">{{row.name}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>

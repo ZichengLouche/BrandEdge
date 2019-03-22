@@ -1,0 +1,62 @@
+.beTableTab
+{
+  margin: 1.5rem;
+  padding: 0;
+  border-collapse: collapse;
+  border: 0;
+  display: inline-block;
+}
+
+div.beTableTab > div
+{
+  border: 1px solid black;
+  margin: 0;
+  border-collapse: collapse;
+  padding: 0.25rem 1rem .15rem 1rem; 
+  border-left: 0;
+  cursor: pointer;
+  font-family: HelvNeueLightforIBM;
+  font-size: 1.1rem;
+  display: inline-block;
+}
+
+div.beTableTab > div:first-of-type
+{
+  border-top-left-radius: 14px;
+  border-bottom-left-radius : 14px;
+  border-left: 1px solid black;
+}
+
+div.beTableTab > div:last-of-type
+{
+  border-top-right-radius: 14px;
+  border-bottom-right-radius : 14px;
+}
+
+div.beTableTab .active
+{
+	background-color: #d8d8d8;
+}
+
+div.beTableTab .active .dropdown-menu
+{
+	display: block;
+	padding: 0px 0;
+	margin: 0;
+}
+
+div.beTableTab .active2
+{
+	background-color: #d8d8d8;
+}
+
+div.beTableTab .dropdown-menu li
+{
+	border: 1px solid black;
+	border-top: none;
+}
+
+div.beTableTab .dropdown-menu li:hover *
+{
+	background-color: #DDE7F6;
+}

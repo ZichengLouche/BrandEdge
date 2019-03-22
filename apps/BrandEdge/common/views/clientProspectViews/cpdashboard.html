@@ -1,0 +1,62 @@
+<div data-be-alert class="login-alerts" data-be-realm="cpDashboard"></div>
+
+<div style="text-align: center;" data-dw-loading="charts" data-dw-loading-options="$root.spinnerOptions">
+	<div class="row" data-ng-repeat="donut in donuts | cpDashChart:showCamss" style="position: relative;">
+		<div class="col-lg-3">
+			<div class="donut-label be-font-18 be-font-light">
+				{{ showHeaderText(donut.key) }}
+			</div>
+			<div class="clearfix"></div>
+			<div data-be-donut="d_{{donut.key}}"  data-be-id="{{donut.key}}"  data-be-data="donut.data"  data-be-broadcast="false" data-be-config = "config" 
+				 data-be-slice="{ slice: 'slice-0' }" class="donut">
+			</div>
+		</div>
+		
+		<div class="col-lg-9 pointer" style="height: 30rem;">
+			<div class="h-line"> </div>
+			<div class="dashbox" style="width: 105%" >
+				<div style="height: 100%;" data-ng-click="navNext(chartData[donut.key].state, donut.key)">
+					<div class="col-lg-6" style="position: relative; height: 100%;" data-ng-if="stage[donut.key] != 'Action'?chartData[donut.key].values != null:(donut.key=='all'?listData.growthGapToMarket.data!=null:false)">
+						<br/>
+						<span data-be-title-tooltip data-be-description="stage[donut.key] != 'Action'?chartData[donut.key].icon:listData.growthGapToMarket.icon" style="font-family: HelvNeueBoldforIBM; font-size: 1.6rem;">
+							<span data-ng-bind-html="stage[donut.key] != 'Action'?graphHeadings[donut.key].color:listData.growthGapToMarket.ratingColor | rating"> </span>	{{ stage[donut.key] != 'Action'?chartData[donut.key].title:listData.growthGapToMarket.tableTitle }}
+						</span>
+						<span style="font-family: HelvNeueBoldforIBM; font-size: 1.6rem;" ng-if="stage[donut.key] != 'Action'">{{ graphHeadings[donut.key].rank }}</span>
+						<div style="width: 100%; height: 80%;"  ng-if="stage[donut.key] != 'Action'" data-be-bar-chart="bar" data-be-chart-data="chartData[donut.key].data"   
+						     data-be-chart-rating="chartData[donut.key].rating"  		data-be-chart-xlabels-visible="true"
+							 data-be-chart-ylabels-visible="false"			     		data-be-chart-percent-visible="true">
+						</div>
+						<data-be-table ng-if="stage[donut.key] == 'Action' && donut.key == 'all'" style="width: 100%; height: 80%;" 
+							data-be-data="listData.growthGapToMarket" 
+							data-be-chart-value-key="donut.key">
+						</data-be-table>
+					</div>
+					<div class="col-lg-6" style="width: 50%; height: 70%; position: relative;" data-ng-if="stage[donut.key] != 'Action'?chartData[donut.key].values == null:(donut.key == 'all'?listData.growthGapToMarket.data==null:true)">
+						<div class="alert alert-info dash-alert" style="height: auto" data-role="alert">
+							No data are available for the selected time period, please select another time period.
+						</div>
+					</div>
+					
+					<div class="col-lg-6" style="width: 50%; height: 100%; position: relative; padding-left:0px;">
+						<div style="text-align: left; width: 108%; ">
+							<br/><br/>
+							<span style="font-family: HelvNeueBoldItalicforIBM; font-size: 1.5rem;">Diagnostic Drivers</span> 			<br/>
+							<div data-ng-if="donutTextArray[donut.key].length != 0">
+			                	<div class="row-details be-font-12" data-ng-repeat="row in donutTextArray[donut.key]">
+			                    	<a class="icon {{ row.color | iconcheck: true }}" href="#" ></a><div data-be-title-tooltip data-be-description="row.icon" class="name">{{row.name}}</div><div class="value">{{row.value}}</div>
+			                 	</div>
+			             	</div>
+			             	<!-- <div data-ng-if="donutTextArray[donut.key].length == 0">
+			                	<div class="alert alert-info" data-role="alert">
+									No data are available for the selected time period, please select another time period.
+								</div>
+			             	</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<hr data-ng-if="donut.key == 'all'" style="color: #A4A4A4; border-top: 1px solid #A4A4A4;"/>
+	</div>
+</div>

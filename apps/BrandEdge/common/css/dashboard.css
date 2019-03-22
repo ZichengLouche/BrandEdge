@@ -1,0 +1,88 @@
+div.view-dashboard{
+	position: relative;	
+}
+
+div.view-dashboard div.row:not(:first-child) {
+    margin-top: 50px;
+}
+
+div.view-dashboard div.donuts{
+	
+}
+
+div.view-dashboard div.donuts div.donut-label{
+	text-align: center;
+	width: 20rem; 
+}
+
+div.view-dashboard div.donuts div.donut-label span{
+	
+}
+
+div.view-dashboard div.donuts div.donut {
+	width: 20rem; 
+	height: 20rem;
+}
+
+div.container div.be-views div.view-dashboard div.donut-details{
+     width: 45%;
+     min-height: 45%;
+     border: 1px solid transparent;
+     border-radius: 1rem;
+     position: absolute;
+     background-color: #F5F5F5;
+     padding: 1%;
+     left: 50%;
+     top: 20%;
+     transform: translate(-50%, 0);
+}
+
+div.container div.be-views div.view-dashboard div.donut-details-border-left{
+    border-left: 2px solid #979797;
+    border-radius: 0 1rem 1rem 0;
+}
+
+div.container div.be-views div.view-dashboard div.donut-details-border-right{
+    border-right: 2px solid #979797;
+    border-radius: 1rem 0 0 1rem;
+}
+
+div.container div.be-views div.view-dashboard div.donut-details-line-top-left{
+     position: absolute;
+     width: 5%;
+     left: -5%;
+     top: 25%;
+     border-top: 2px solid #979797;
+     transform: rotate(30deg)
+ }
+
+div.container div.be-views div.view-dashboard div.donut-details-line-top-right{
+    position: absolute;
+    width: 5%;
+    right: -5%;
+    top: 25%;
+    border-top: 2px solid #979797;
+    transform: rotate(-30deg)
+}
+
+div.container div.be-views div.view-dashboard div.donut-details-line-bottom-left{
+    position: absolute;
+    width: 5%;
+    left: -5%;
+    bottom: 25%;
+    border-top: 2px solid #979797;
+    transform: rotate(-30deg)
+}
+
+div.container div.be-views div.view-dashboard div.donut-details-line-bottom-right{
+    position: absolute;
+    width: 5%;
+    right: -5%;
+    bottom: 25%;
+    border-top: 2px solid #979797;
+    transform: rotate(30deg)
+}
+
+div.alertVerification{
+	border: 1px solid red;
+}

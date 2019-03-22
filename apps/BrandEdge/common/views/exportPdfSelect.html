@@ -1,0 +1,47 @@
+<div class='top-class'>
+	<h4 class='title' data-ng-if="curConstituent != 'WW/IOT Beta'">Export charts</h4>
+	<h4 class='title' data-ng-if="curConstituent == 'WW/IOT Beta'">Export Consolidated Dashboard</h4>
+	<div class='selectContainer' data-ng-if="curConstituent != 'WW/IOT Beta'">
+		<div class='selectText'>
+		Select chart to export
+		</div>
+		
+		<div class='selectBox'>
+		<input id="selectAllChartId" type="checkbox" ng-click="selectAllChart()"/><span class='all'>All</span>
+		</div>
+	</div>
+	
+	<div class='formatContainer' data-ng-if="curConstituent != 'WW/IOT Beta'">
+		<div class='formatText'>Column Format</div>
+		<input type="radio" id="radio1" checked="checked" name="columnFormat" value='1'/><span class='formatradio'>&nbsp;1 column</span>
+		<input type="radio" id="radio2" name="columnFormat" value='2'/><span class='formatradio'>&nbsp;2 columns</span>
+		<input type="radio" id="radio3" name="columnFormat" value='3'/><span>&nbsp;3 columns</span>
+	</div>
+
+	<div class='orientationContainer'>
+		<div class='orientationText'>Portrait/Landscape</div>
+		<input type="radio" id="radio1" checked="checked" name="orientation" value='false'/><span class='orientationradio'>&nbsp;Portrait</span>
+		<input type="radio" id="radio2" name="orientation" value='true'/><span class='orientationradio'>&nbsp;Landscape</span>
+	</div>
+
+	 <div class='container' style='width:100%;padding-left:50px;padding-right:30px' data-ng-if="curConstituent != 'WW/IOT Beta'">
+		 <div class='row'>
+		 	<div class='col-lg-4 lg-4-replace' data-ng-repeat="chart in charts">
+		 		<div class='metric'>
+		 			<div class='checkbox'><input type="checkbox" value="{{ chart.title }}"/></div>
+		 			<div class='metricBox'>
+		 				<div class='middle'>
+		 					<div data-ng-bind-html="chart.rating | rating" class="rate"></div>
+		 					<div>{{ chart.title }}</div>
+		 				</div>
+		 			</div>
+		 		</div>
+		 	</div>
+		 </div>
+	 </div>
+
+	<div style='text-align:right;margin-right:70px;margin-top:20px'>
+		<button type="button" class="btn btn-default btn-sm" data-ng-click="closePopup()">Cancel</button>
+		<button type="button" class="btn btn-primary btn-sm" data-ng-click="exportSelectPdf()">Export</button>
+	</div>
+</div>  

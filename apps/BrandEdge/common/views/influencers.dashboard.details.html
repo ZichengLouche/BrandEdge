@@ -1,0 +1,47 @@
+<div class="view-influencer-dashboard" style="height: 100%;">
+    <alert type="{{alert.type}}" ng-if="alert" style="margin-top: 1rem;">{{alert.msg}}</alert>
+    <div data-dw-loading="loading" style="height: 100%;" data-dw-loading-options="$root.spinnerOptions">
+        <div class="row" data-ng-repeat="donut in data">
+            <div class="row" style="height: 100%;">
+                <div class="col-lg-3 col-donut" style="">
+                    <div class="donut-label be-font-18 be-font-light"><span>{{donut.label}}</span></div>
+                    <div class="clearfix"></div>
+                    <div
+                      data-be-donut="d_{{$index}}"
+                      data-be-id="{{$index}}"
+                      data-be-data="donut"
+                      data-be-config="config"
+                      data-be-broadcast="false"
+                      data-be-slice="{ slice: 'slice-0' }"
+                      class="donut">
+                    </div>
+                </div>
+                
+                <div class="col-lg-9 col-donut-chart pointer"  style="" data-ng-click="click($index, donut, details($index))">
+                    <div class="donut-chart-details-line" data-ng-if="show($index)"></div>
+                    <div class="donut-chart-details-with-line" data-ng-if="show($index)" style="width:104%;">
+                        <alert type="{{details($index).alert.type}}" data-ng-if="details($index).alert" class="donut-chart donut-chart-center donut-chart-alert" style="">{{details($index).alert.msg}}</alert>
+                        <div data-ng-if="!details($index).alert" style="overflow: hidden;position: absolute; top: 5%; left: 3%;">
+                            <a class="icon {{ details($index).chartTitle.color | iconcheck: true }}" href="#" ></a><div data-be-title-tooltip data-be-description="details($index).chartTitle.icon" class="name be-font-16 be-font-bold">{{details($index).chartTitle.name}}</div><div class="value be-font-13 be-font-bold">{{details($index).chartTitle.value|ranking}}</div>
+                        </div>
+                        <div style="background-color: #F5F5F5;"
+                          id="bar-chart"
+                          class="donut-chart "
+                          data-be-chart
+                          data-be-type="bar"
+                          data-be-data="details($index).chart"
+                          data-be-config="details($index).chartConfig"
+                          data-ng-if="!details($index).alert">
+                        </div>
+                        <div class="info" style="x-transform: none; width:53%">
+                            <div class="be-font-15 be-font-medium-italic" style="margin: 0rem 0 0.5rem 0.2rem;">Diagnostic drivers:</div>
+                            <div class="row-details be-font-12" data-ng-repeat="row in details($index).data">
+                                <a class="icon {{ row.color | iconcheck: true }}" href="#" ></a><div data-be-title-tooltip data-be-description="row.icon" class="name">{{row.name}}</div><div class="value">{{row.value|ranking}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+<div style="height: 85%">
+    <nav class="navbar navbar-default navbar-w3">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a class="navbar-brand" href="#">
+                        <div class="image-w3"></div>
+                    </a>
+                </div>
+            </div>
+            <div style="float:left; line-height:3.5;">
+            	<span style="line-height:4px; padding-right:6px;">
+	            	Hello {{ name }}
+	            </span> |
+	            <span style="padding-left:6px; cursor:pointer;" data-ng-click="doSignOut()">Sign out</span>
+	        </div>
+	        <div style="float: left;line-height: 3;margin-left: 5rem;width: 60%;">
+	        	<be-marquee ng-if='!editable'>
+	            </be-marquee>
+	            <button style='width:10%;display:inline-block;float:left;padding-right: 6px;line-height:180%;margin-top:1%;margin-bottom:1%;' ng-if='isAdmin()&&!editable' ng-click='showEdit()'>Edit</button>
+	            <form name='bannerForm' ng-if='editable'>
+	            	<input set-focus 
+	            	style='float: left;font-weight: 900;padding-right: 6px; width: 80%;' 
+	            	ng-model='announcement.content' 
+	            	ng-keypress='updateAnnouncement($event, bannerForm.$invalid)'
+	            	ng-maxlength="1000"
+	            	placeholder="Length shall not exceed 1000 characters"
+	            	data-form-verify="banner"
+	            	be-valid="bannerForm.$invalid"/>
+	            	<button 
+	            	style='width:10%;display:inline-block;float:left;padding-right: 6px;line-height:180%;margin-top:1%;margin-bottom:1%;' 
+	            	ng-disabled="bannerForm.$invalid"
+	            	ng-click='updateAnnouncement($event, bannerForm.$invalid)'>Save</button>
+	            </form>
+	        </div>
+            <div class="be-landing-language">
+                <select class="" data-ng-model="country" data-ng-options="language.country for language in languages track by language.code" >
+                    <option data-ng-if="country == null" value="">-- Select a Country --</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default">
+        <div style="float: right; line-height: 100%; margin-top: 2%; margin-right: 2rem; cursor:pointer">
+              <a class="image-help" data-alert-tooltip="help" target = "_blank" href="https://w3-connections.ibm.com/communities/community/brandedge""></a>
+        </div>
+        <div style="float: right; line-height: 100%; margin-top: 2%; margin-right: 2rem; cursor:pointer">
+              <span date-range-picker data-alert-tooltip="calendar" class="image-calendar" data-ng-model="date" options="$root.opt" required>
+        	  </span>
+        </div>
+
+        <div style="float: right; line-height: 100%; margin-top: 2%; margin-right: 2rem; cursor:pointer" data-ng-click="showExportPdfPopup()">
+        	<a class="image-export" data-ng-if="$root.showExport" data-alert-tooltip="export"></a>
+        </div>
+        
+        <div class="container" style="height: 5rem;">
+            <div style="margin-left: 90px;" class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <div class="be-color-a be-font-20 landing-title">
+                        <span class="be-font-normal">{{ 'brand' | i18n }}</span><span class="be-font-bold">{{ 'edge' | i18n }}</span>
+                        <span class="be-color-a be-font-07 be-font-normal ng-binding">{{ 'by' | i18n }}</span>
+						<span class="be-color-a be-font-07 be-font-bold ng-binding">{{ 'MD&I' | i18n }}</span>
+                        <br />
+                        <div class="be-color-a be-font-07 be-font-normal">{{ 'subtitle' | i18n }}</div>
+                    </div>
+                </a>
+            </div>
+            <div class="" style="float: left;">
+                <ul id="constituentId" class="nav navbar-nav" style="margin-left: 4rem;">
+                    <li data-ng-repeat="tab in tabs"
+                        data-ng-class="{active:isActiveTab(tab)}"
+                        data-ng-click="onClickTab(tab)"
+                        data-ui-sref="{{tab.url}}"><a href="#">{{tab.title}}</a></li>
+                </ul>
+            </div>
+           <!--  <div style="float: right; height: 100%; padding-top: 1.7rem;">
+                <div style="width: 100%; height: 100%;">
+                    <a href="https://w3-connections.ibm.com/communities/community/brandedge" target="_blank" style="position: relative; display: block; padding: 10px 15px; padding-top: 15px; padding-bottom: 15px;">BrandEDGE Support Wiki</a>
+                </div>
+            </div>-->
+        </div>
+    </nav>
+    <div id="chartArea">
+    <div style="float: right; position:absolute; right:4rem;">
+	    <div style="display:inline-block; line-height: 0.5rem" data-ng-if="date.isCurrent">Most Recent</div>
+	    <div style="display:inline-block; line-height: 0.5rem" data-ng-if="!date.isCurrent && !$root.opt.singleDatePicker" data-ng-switch on="date.startDate|date:'MM'">
+	    	<div data-ng-switch-when="01">January &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+	    	<div data-ng-switch-when="02">February &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+	    	<div data-ng-switch-when="03">March &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+	    	<div data-ng-switch-when="04">April &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+	    	<div data-ng-switch-when="05">May &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+	    	<div data-ng-switch-when="06">June &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+	    	<div data-ng-switch-when="07">July &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+	    	<div data-ng-switch-when="08">August &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+	    	<div data-ng-switch-when="09">September &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+	    	<div data-ng-switch-when="10">October &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+	    	<div data-ng-switch-when="11">November &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+	    	<div data-ng-switch-when="12">December &nbsp<span data-ng-bind="date.startDate|date:'yyyy'"></span> -&nbsp</div>
+		</div>
+	    <div style="display:inline-block; line-height: 0.5rem" data-ng-if="!date.isCurrent" data-ng-switch on="date.endDate|date:'MM'">
+	    	<div data-ng-switch-when="01">January &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+	    	<div data-ng-switch-when="02">February &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+	    	<div data-ng-switch-when="03">March &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+	    	<div data-ng-switch-when="04">April &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+	    	<div data-ng-switch-when="05">May &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+	    	<div data-ng-switch-when="06">June &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+	    	<div data-ng-switch-when="07">July &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+	    	<div data-ng-switch-when="08">August &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+	    	<div data-ng-switch-when="09">September &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+	    	<div data-ng-switch-when="10">October &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+	    	<div data-ng-switch-when="11">November &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+	    	<div data-ng-switch-when="12">December &nbsp<span data-ng-bind="date.endDate|date:'yyyy'"></span></div>
+		</div>
+	</div>
+	<div class="container" id="mainContainerDiv" style="min-height:{{$root.minHeight+'px'}}; width:90%;">
+		<div data-ui-view style="position: relative; margin-bottom: 30px;" class="be-views">
+		</div>
+	</div>
+	<div class="footer" id="footerContainerDiv" style="bottom:0; left:0; width:100%;">
+   			<div class="navbar-footer" ng-controller = "LogonController">
+        		<div class="navbar-access be-font-normal ng-binding" style="font-size:10px">V 4.9</div>
+        		<div class="navbar-access">
+            		<a href="mailto:brdedge@us.ibm.com" style="color: white">
+              		 Contact us
+            		</a>
+        		</div>
+        		<div class="navbar-access">
+            		<a data-ng-click="showTerms()" style="color: white">
+               		Terms of Use
+            		</a>  
+        		</div>
+        		<div class="navbar-access">
+             		<a href="https://w3-connections.ibm.com/communities/service/html/communitystart?communityUuid=c814322f-6fad-4c55-9bf5-743d50014ebe#fullpageWidgetId=W1ff722111c4a_4c9b_bffa_720fe1876113&startTopic=true" target = "_blank" style="color: white">
+               		Feedback
+             		</a>  
+        		</div>
+        		<div class="navbar-access" style="text-align: center; float: none; margin: auto;">
+        			IBM Confidential
+                    <div style="float: right;display:inline ">
+                    <span class="be-font-normal ng-binding">IBM</span>
+					<span class="be-font-bold ng-binding"> MD&I</span>
+                    </div>
+       		 	</div>
+                <div style="clear:both"></div>
+                
+			</div>
+	</div>
+</div>

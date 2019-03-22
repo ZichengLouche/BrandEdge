@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter name="BHDSqlAdapter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:wl="http://www.ibm.com/mfp/integration"
+	xmlns:sql="http://www.ibm.com/mfp/integration/sql">
+
+	<displayName>BHDSqlAdapter</displayName>
+	<description>BHDSqlAdapter</description>
+	<connectivity>
+		<connectionPolicy xsi:type="sql:SQLConnectionPolicy">
+			<dataSourceJNDIName>jdbc/bhd</dataSourceJNDIName>
+		</connectionPolicy>
+	</connectivity>
+
+	<!-- Replace this with appropriate procedures -->
+	<procedure name="getWWIotDashboardListsReport" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getWWIotDashboardListsReportByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDashboardListsReport" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDashboardListsReportByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDashboardBarChartData" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDashboardBarChartDataByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCountryList" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCpCurrent" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCpByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCpFiltered" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getInfluencerDashboard" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getInfluencerDashboardByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getInfluencerBarChartData" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getInfluencerBarChartDataByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getInfluencerChartData" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getInfluencerChartDataByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getInfluencerTableChartData" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getInfluencerTableChartDataByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getInfluencerChartClassData" securityTest="BEAppAuthSecTest"/>	
+	<procedure name="getInfluencerChartClassDataByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDeveloperDashboardListsReport" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDeveloperDashboardListsReportByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDeveloperDashboardBarChartData" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDeveloperDashboardBarChartDataByMonth" securityTest="BEAppAuthSecTest"/>
+	
+	<procedure name="getDeveloperCurrent" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDeveloperByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDeveloperTableChart" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDeveloperTableChartByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getEmployeeCurrent" securityTest="BEAppAuthSecTest"/>	
+	<procedure name="getEmployeeByYear" securityTest="BEAppAuthSecTest"/>	
+	<procedure name="getCpListCurrent" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCpListByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCPDashboardCurrent" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCPDashboardByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCPDashboardChartsCurrent" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCPDashboardChartsByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getViewableCountries" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getWWIOTList" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getSecurityProfile" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getMetricModel" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCPDashboardTableCurrent" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCPDashboardTableByMonth" securityTest="BEAppAuthSecTest"/>
+	
+	<procedure name="getCPStrategicCharacteristicsCurrent" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getCPStrategicCharacteristicsByMonth" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDevelopersStrategicCharacteristicsCurrent" securityTest="BEAppAuthSecTest"/>
+	<procedure name="getDevelopersStrategicCharacteristicsByMonth" securityTest="BEAppAuthSecTest"/>
+
+	<procedure name="getTrendData" securityTest="BEAppAuthSecTest"/>
+	
+	<procedure name="setBannerContent" securityTest="wl_unprotected"/>
+	<procedure name="getBannerContent" securityTest="BEAppAuthSecTest"/>
+</wl:adapter>

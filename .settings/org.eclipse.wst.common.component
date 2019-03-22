@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="BrandEdge">
+        <wb-resource deploy-path="/" source-path="/apps/BrandEdge/common"/>
+        <wb-resource deploy-path="/" source-path="/apps/BrandEdge/mobilewebapp"/>
+        <wb-resource deploy-path="/" source-path="/apps/BrandEdge/iphone"/>
+        <property name="context-root" value="BrandEdge"/>
+    </wb-module>
+</project-modules>

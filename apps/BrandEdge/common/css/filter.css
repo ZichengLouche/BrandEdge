@@ -1,0 +1,50 @@
+div.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 9%;
+    x-border: 1px solid red;
+    display: none;
+}
+
+div.filter div.v-middle {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: 100%;
+}
+
+div.filter div.calendar {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    padding-left: 1rem;
+    border: 1px solid #0088b8;
+ }
+
+div.filter a.selector-icon{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    float: left;
+}
+
+div.filter div.text{
+    position: relative;
+    display: block;
+    height: 2rem;
+    width: 80%;
+    float: left;
+    color: #595856;
+    margin-left: 0.5rem;
+    border: 1px solid red;
+}
+
+div.filter div.selector {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    padding-left: 1rem;
+    border: 1px solid #ec971f;
+}

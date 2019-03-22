@@ -1,0 +1,62 @@
+<div id="wwiotId" style="height: 80%;">
+	<div>WW/IOT view</div>
+	<div style="position:relative;display:inline-block;margin-left: 1%;vertical-align: top;">
+		<a data-ng-click="openSegmentation()"><img src ="images/icons/settings@1x.png"/></a>
+	</div>
+	<nav class="" data-ng-style="navStyle">
+		<div style="display:inline-block;width:25%; margin-left: 1%;">
+		<div data-ng-click="openSegmentation()" style="cursor:pointer">Metrics Settings</div>
+    		<div class="row-details be-font-12" data-ng-if="segmentationTrigger" style="margin: auto; display:inline-block; line-height: 2rem">
+    			<div><a class="icon-open" data-ng-if="!allOutcomes" data-ng-click="toggle('allOutcomes', true, true)"/>
+					 <a class="icon-close" data-ng-if="allOutcomes" data-ng-click="toggle('allOutcomes', false, false)"/> Show all Outcomes</div>
+			</div>
+			<div class="row-details be-font-12" data-ng-if="segmentationTrigger" style="margin-left:1rem; display:inline-block; line-height: 2rem">
+				<div><a class="icon-open" data-ng-if="!geographoes" data-ng-click="toggle('geographoes', true)"/>
+					 <a class="icon-close" data-ng-if="geographoes" data-ng-click="toggle('geographoes', false)"/> Show Geographies</div>
+			</div>
+			<div class="row-details be-font-12" data-ng-if="segmentationTrigger" style="margin-left:2rem;">
+				<div><span class="icon-disabled" data-ng-if="!enabledAdditional"/>
+					 <a class="icon-open" data-ng-if="!additional&&enabledAdditional" data-ng-click="toggle('additional', true)"/>
+					 <a class="icon-close" data-ng-if="additional&&enabledAdditional" data-ng-click="toggle('additional', false)"/> Show Additional</div>
+			</div>
+			<div data-ng-if="segmentationTrigger" style="margin-top:1rem">Stages</div>
+			<div class="row-details be-font-12" data-ng-if="segmentationTrigger" style="display:inline-block;">
+				<div><input type="checkbox" ng-model="setting.stages.all">All</div>
+				<div><input type="checkbox" ng-model="setting.stages.belief">Belief</div>
+			</div>
+			<div class="row-details be-font-12" data-ng-if="segmentationTrigger" style="display:inline-block;margin-left:1rem">
+				<div><input type="checkbox" ng-model="setting.stages.action">Action</div>
+				<div><input type="checkbox" ng-model="setting.stages.advocacy">Advocacy</div>
+			</div>
+		</div>
+		<div data-ng-if="segmentationTrigger" style="display:inline-block;width:25%">
+			<div>Constituents</div>
+			<div class="row-details be-font-12" style="display:inline-block;">
+				<div><input type="checkbox" ng-model="setting.constituents.all">All</div>
+				<div><input type="checkbox" ng-model="setting.constituents.cp">Clients & Prospects</div>
+				<div><input type="checkbox" ng-model="setting.constituents.influencers">Influencers</div>
+				<div><input type="checkbox" ng-model="setting.constituents.developers">Developers</div>
+				<div><input type="checkbox" ng-model="setting.constituents.employees">Employees</div>
+			</div>
+		</div>
+		<div data-ng-if="segmentationTrigger" style="display:inline-block;width:40%">
+			<div>Segmentation</div>
+			<div class="row-details be-font-12" style="display:inline-block;">
+				<div><input type="radio" ng-model="setting.segmentation" value="allover">Market (All)</div>
+				<div><input type="radio" ng-model="setting.segmentation" value="Cognitive">Cognitive (C&P, I)</div>
+				<div><input type="radio" ng-model="setting.segmentation" value="Cloud">Cloud (C&P, I)</div>
+				<div><input type="radio" ng-model="setting.segmentation" value="Analytics">Analytics (C&P, I)</div>
+				<div><input type="radio" ng-model="setting.segmentation" value="Mobile">Mobile (C&P, I)</div>
+				<div><input type="radio" ng-model="setting.segmentation" value="Social">Social (C&P, I)</div>
+			</div>
+			<div class="row-details be-font-12" style="display:inline-block;vertical-align: top;">
+				<div><input type="radio" ng-model="setting.segmentation" value="Security">Security (C&P, I)</div>
+				<!-- <div><input type="radio" ng-model="setting.segmentation" value="IT/LOB">IT/LOB(C&P Only)</div>
+				<div><input type="radio" ng-model="setting.segmentation" value="Clients/Prospects">Clients/Prospects(C&P Only)</div>
+				<div><input type="radio" ng-model="setting.segmentation" value="IBMer/External">IBMer/External(Influencers Only)</div> -->
+			</div>
+		</div>
+	</nav>
+</div>
+<div data-ui-view>
+</div>

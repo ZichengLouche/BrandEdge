@@ -1,0 +1,168 @@
+.icon-grey{
+    background-image: url("../images/icons/grey@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-grey2x{
+    background-image: url("../images/icons/grey@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-light-green{
+	background-image: url("../images/icons/green1@1x.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.icon-light-green2x{
+	background-image: url("../images/icons/green1@2x.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.icon-green{
+    background-image: url("../images/icons/green2@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-green2x{
+    background-image: url("../images/icons/green2@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-dark-green{
+    background-image: url("../images/icons/green3@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-dark-green2x{
+    background-image: url("../images/icons/green3@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-pink{
+    background-image: url("../images/icons/pink@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-pink2x{
+    background-image: url("../images/icons/pink@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-red{
+	background-image: url("../images/icons/red@1x.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.icon-red2x{
+	background-image: url("../images/icons/red@2x.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+.icon-yellow{
+	background-image: url("../images/icons/yellow@1x.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.icon-yellow2x{
+	background-image: url("../images/icons/yellow@2x.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.icon-options{
+    background-image: url("../images/icons/options@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-options2x{
+    background-image: url("../images/icons/options@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-options-ranking{
+    background-image: url("../images/icons/options-ranking@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-options2x-ranking{
+    background-image: url("../images/icons/options-ranking@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-calendar{
+    background-image: url("../images/icons/calendar@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-calendar2x{
+    background-image: url("../images/icons/calendar@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-selector{
+    background-image: url("../images/icons/selector@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-selector2x{
+    background-image: url("../images/icons/selector@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-open{
+	width: 1.2rem;
+    height: 1.2rem;
+    background-image: url(../images/icons/Open@1x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 99%;
+    margin: 0 auto;
+    padding: 0.5;
+    position: relative;
+    display: inline-block;
+}
+
+.icon-close{
+	width: 1.2rem;
+    height: 1.2rem;
+    background-image: url(../images/icons/Close@1x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 99%;
+    margin: 0 auto;
+    padding: 0.5;
+    position: relative;
+    display: inline-block;
+}
+
+.icon-disabled{
+	width: 1.2rem;
+    height: 1.2rem;
+    background-image: url(../images/icons/disabled@1x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 99%;
+    margin: 0 auto;
+    padding: 0.5;
+    position: relative;
+    display: inline-block;
+}

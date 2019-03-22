@@ -1,0 +1,152 @@
+div.cp-outer-cell
+{
+    display: block;
+    width: 100%;
+    height: 32rem;
+    position: relative;
+    padding: 0.5rem;
+}
+div.cp-outer-cell-trend
+{
+    display: block;
+    width: 100%;
+    height: 48rem;
+    position: relative;
+    padding: 0.5rem;
+}
+
+div.cp-graph-block 
+{
+	position: relative;
+	display: block;
+	border: 1px solid black;
+	border-radius: 4px;
+	box-shadow: 5px 5px 2px #aaaaaa;
+	text-align: left;
+	/*vertical-align: top;*/
+	width: 100%;
+    height: 100%;
+}
+
+div.col-lg-4:first-of-type div.cp-outer-cell:first-of-type div.cp-graph-block:first-of-type > div > div:first-child > div:first-child
+{
+	position: relative;
+	background-color: #4E92DF;
+	height: 5rem;
+	display: block;
+	color: #ffffff;
+	font-family: HelvNeueBoldforIBM;
+/*	font-size: 1.5rem; */
+	border-radius: 4px 4px 0 0;
+	/* background-image: linear-gradient(-180deg, #7CC7FF 0%, #4178BE 100%); */
+	background-image: linear-gradient(-180deg, #71ACF4 0%, #322CAB 100%);
+}
+
+div.cp-graph-block > div  > div:first-child > div:first-child
+{
+	position: relative;
+	background-color: #87AFDB ;
+	height: 5rem;
+	display: block;
+	color: #4F4B4E;
+	font-family: HelvNeueBoldforIBM;
+/*	font-size: 1.5rem; */
+	border-radius: 4px 4px 0 0;
+	background-image: linear-gradient(-180deg, #E0EAF7 0%, #779ACF 100%);
+}
+
+div.cp-graph-block > div > div > div:first-child > div
+{
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-68%);
+}
+
+div.cp-graph-block > div > div > div:first-child > div > div
+{
+	display: inline-block;
+}
+
+div.cp-graph-block > div > div > div > div
+{
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+div.cp-graph-block > div
+{
+	position: relative;
+}
+
+div.cp-graph-block > div  > div:first-child > div:nth-child(2)
+{
+	display: block;
+	text-align: right;
+	position: absolute;
+	bottom: 3px;
+	right: 5px;
+	font-family: HelvNeueLightforIBM;
+/*	font-size: 0.8rem; */
+	color: white;
+}
+
+div.cp-graph-block > div:nth-child(2) > div
+{
+	display: block;
+	text-align: right;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	font-family: HelvNeueLightforIBM;
+/*	font-size: 0.8rem; */
+	color: #AE9DA4;
+}
+
+div.cp-graph-block > div:nth-child(3)
+{
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+	z-index: 10;
+	cursor: pointer;
+}
+
+div.borderIt
+{
+	border: 1px solid red;
+}
+
+div.cp-graph-block > div  > div:first-child > div.previous
+{
+	display: block;
+	text-align: left;
+	position: absolute;
+	bottom: 3px;
+	left: 35px;
+	font-family: HelvNeueLightforIBM;
+	color: white;
+	height: 30%;
+	width: 70%;
+}
+div.cp-graph-block > div  > div:first-child > div.previous > div.prating
+{
+	float:left;
+	margin-left: -1px;
+	margin-right: -1px;
+}
+div.cp-graph-block > div  > div:first-child > div.previous > div.prating > img
+{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+div.cp-graph-block > div  > div:first-child > div.period
+{
+	display: block;
+	text-align: right;
+	position: absolute;
+	bottom: 3px;
+	right: 5px;
+	font-family: HelvNeueLightforIBM;
+	color: white;
+}

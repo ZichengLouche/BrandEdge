@@ -1,0 +1,105 @@
+div.container div.be-views div.donut {
+	width: 20rem; 
+	height: 20rem;
+}
+
+div.container div.be-views div.donut-label{
+	text-align: center;
+	width: 20rem; 
+}
+
+div.container div.be-views div.donut-label span{
+	
+}
+
+div.container div.be-views div.col-donut, div.container div.be-views div.col-donut-chart {
+	height: 30rem;
+	x-border: 1px solid black;
+}
+
+
+div.container div.be-views div.donut-chart-details{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+div.container div.be-views div.donut-chart-details-with-line{
+    width: 100%;
+    position: absolute;
+    height: 80%;
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    border-left: 2px solid #979797;
+    background-color: #F5F5F5;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem
+}
+
+div.container div.be-views div.donut-chart-details-line {
+    position: absolute;
+    width: 5%;
+    left: -3%;
+    top: 25%;
+    border-top: 2px solid #979797;
+}
+
+div.container div.be-views div.donut-chart{
+	width: 50%;
+	height: 80%;
+	position: absolute;
+	x-float: left;
+	left: 0%;
+	top: 58%;
+	transform: translate(0%, -50%);
+}
+
+div.container div.be-views div.donut-chart-center{
+    top: 50%;
+}
+
+div.container div.be-views div.donut-chart-alert{
+    height: auto;
+    width: 40%;
+    margin-left: 5%;
+}
+
+div.container div.be-views div.info{
+	width: 50%;
+	position: absolute;
+	right: 0%;
+	top: 35%;
+	transform: translate(0%, -50%);
+}
+
+div.container div.be-views div.info-left{
+    width: 50%;
+    position: absolute;
+    left: 0%;
+    top: 20%;
+    x-transform: translate(0%, -50%);
+}
+
+div.container div.be-views .icon{
+	float: left;
+	width: 2rem;
+	height: 2rem;
+	display: block;
+}
+
+div.container div.be-views .name{
+	float: left;
+	display: block;
+	margin-left: 0.5rem;
+}
+
+div.container div.be-views .value{
+	float: left;
+	display: block;
+	margin-left: 0.5rem;
+}
+
+div.container div.be-views div.row-details{
+	overflow: hidden;
+}

@@ -1,0 +1,42 @@
+<div class="login-view">
+	<div class="table">
+		<div class="cell">
+			<div class="login-box">
+		    	<div class="login-logo">
+		             <div class="be-color-a">
+		                 <div>
+		                     <span class="be-font-40 be-font-light">Brand</span>
+		                     <span class="be-font-40 be-font-bold">Edge</span>
+		                 </div>
+		                 <span class="be-font-15 be-font-light">Belief.Action.Advocacy</span>
+		             </div>
+		         </div>
+		         
+	         	 <div class="login-form">                
+	                <form>
+	                    <div class="input-group">
+	                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	                        <input type="text" id="userid" placeholder="Enter Intranet ID" class="form-control" data-ng-model="userid" name="userid" type="email" maxlength="50" tabindex="1"/>
+	                    </div>
+	                    <br style="line-height: 2;"/>
+	                    <div class="input-group">
+	                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+	                        <input id="psd"  name="password" type="password" placeholder="Enter Password" class="form-control" data-ng-model="password" maxlength="30" tabindex="2"/>
+	                    </div>
+	                    <div class="checkbox logon-terms">
+	                        <label>
+	                            <input type="checkbox" data-ng-model="termsCheck"/>&nbsp; I accept <a data-ng-click="showTerms()" >Terms and Conditions</a>
+	                        </label>
+	                    </div>
+	                    <div>
+	                        <button class="login-button" data-ng-click="doLogin()">Login</button>
+	                    </div>
+	                    <div data-be-alert class="login-alerts" data-be-realm="login"></div>
+	                </form>
+	            </div>
+    		</div>
+		</div>
+	</div>
+</div>
+<div class="login-bottom"></div>
+<div style="display:none;">version:4.9.0</div> 

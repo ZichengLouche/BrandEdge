@@ -1,0 +1,160 @@
+<div id="wwiotId" class="view-dashboard" style="height: 100%;">
+<alert type="{{alert.type}}" ng-if="alert">{{alert.msg}}</alert>
+	<div data-dw-loading="loading" style="height: 100%;z-index:7000" data-dw-loading-options="$root.spinnerOptions">
+	<div class="row" style="margin-top: 5rem">
+	<nav class="legend-trigger" style="right: -28px; cursor: pointer" data-ng-click="openLegend()">Key</nav>
+	<nav class="legend-spmenu" data-ng-style="{right: isActive? '-104px':'-1300px'}">
+		<div class="legend-button" style="cursor: pointer;" data-ng-click="openLegend()">
+			<img src ="images/icons/keybutton@1x.png"/>
+			<div style="transform:rotate(-90deg); position: relative; display: inline-block;overflow:hidden; width: 3rem; height:2.5rem; font-size: 1.4rem; margin:0 auto; float:left">Key</div>
+		</div>
+		<div style="margin-top:3%; margin-left: 4rem; height: 94%;overflow: hidden;">
+			<div style='display: inline-block; postion: relative;overflow:hidden;width:24%;float: left;'>
+				<div style="height: 24%; margin-bottom: 1rem;">
+					<div style="font-weight: bold;">Brand Health Score (BHS):</div>
+					<div style="font-size: 1.3rem">(BHS is the sum of the Outcome metric score values; WW/IOT BHS is weighted to reflect GMV; WW & IOT metrics are rounded)</div>
+				</div>
+				<div style="overflow:hidden;height: 19%;"><span style="float: left;margin-left:40%;width: 60%;font-weight: bold;">IBM's brand health in this market is:</span></div>
+				<div style="overflow:hidden;height: 19%;height:4rem;"><span class="greenicon" style="width:15%;margin-right:3%;height: 3rem"></span><span style="float:left;margin-right: 2%;width: 25%;text-align:center;font-size: 1.3rem">Green<br>(+2 to +3)</span><span style="float: left;width: 52%;font-size: 1.3rem">Differentiated versus competitors</span></div>
+				<div style="overflow:hidden;height: 19%;height:4rem;"><span class="yellowicon" style="width:15%;margin-right:3%;height: 3rem"></span><span style="float:left;margin-right: 2%;width: 25%;text-align:center;font-size: 1.3rem">Yellow<br>(+1 to -1)</span><span style="float: left;width: 52%;font-size: 1.3rem">Not differentiated versus competitors</span></div>
+				<div style="overflow:hidden;height: 19%;height:4rem;"><span class="redicon" style="width:15%;margin-right:3%;height: 3rem"></span><span style="float:left;margin-right: 2%;width: 25%;text-align:center;font-size: 1.3rem">Red<br>(-2 to -3)</span><span style="float: left;width: 52%;font-size: 1.3rem">Substantially below competitors</span></div>
+			</div>
+			<div style='margin-top: 0;display: inline-block; postion: relative;overflow:hidden;width:24%;float: left;'>
+				<div style="height: 25%;margin-top: 0;font-weight: bold;margin-bottom: 3rem;">Metric scoring for comparative metrics:</div>
+				<div style="overflow:hidden;height: 18%;height:4rem;"><span class="greenicon" style="width:15%;margin-right:3%"></span><span style="float:left;margin-right: 2%;width: 20%;text-align:center;font-size: 1.3rem">+1</span><span style="float: left;width: 60%;font-size: 1.3rem">IBM is in 1st place</span></div>
+				<div style="overflow:hidden;height: 18%;height:4rem;"><span class="yellowicon" style="width:15%;margin-right:3%"></span><span style="float:left;margin-right: 2%;width: 20%;text-align:center;font-size: 1.3rem">0</span><span style="float: left;width: 60%;font-size: 1.3rem">IBM is not in 1st place but at or above average</span></div>
+				<div style="overflow:hidden;height: 18%;height:4rem;"><span class="redicon" style="width:15%;margin-right:3%"></span><span style="float:left;margin-right: 2%;width: 20%;text-align:center;font-size: 1.3rem">-1</span><span style="float: left;width: 60%;font-size: 1.3rem">IBM is below average</span></div>
+				<div style="overflow:hidden;height: 18%;height:4rem;"><span class="greyicon" style="width:15%;margin-right:3%"></span><span style="float: left;margin-left:22%;width: 60%;font-size: 1.3rem">No data to display</span></div>
+				<div style="overflow:hidden;height: 18%;height:4rem;"><span class="whiteicon" style="width:15%;margin-right:3%"></span><span style="float: left;margin-left:22%;width: 60%;font-size: 1.3rem">Not Applicable</span></div>
+			</div>
+			<div style='margin-top: 0;display: inline-block; postion: relative;overflow:hidden;width:20%;float: left;'>
+				<div style="margin-bottom: 5rem;width:80%;font-weight: bold;">Performance assessment trend from previous period:</div>
+				<div style="overflow:hidden;height:2.5rem;"><span style="float: left;margin-left:5%;width: 5%;"><img src ="images/icons/DownGreen@1x.png"/></span><span style="float: left;margin-left:2%;width: 80%;font-size: 1.3rem">Down, previously green</span></div>
+				<div style="overflow:hidden;height:2.5rem;"><span style="float: left;margin-left:5%;width: 5%;"><img src ="images/icons/DownYellow@1x.png"/></span><span style="float: left;margin-left:2%;width: 80%;font-size: 1.3rem">Down, previously yellow</span></div>
+				<div style="overflow:hidden;height:2.5rem;"><span style="float: left;margin-left:5%;width: 5%;"><img src ="images/icons/UpYellow@1x.png"/></span><span style="float: left;margin-left:2%;width: 80%;font-size: 1.3rem">Up, previously yellow</span></div>
+				<div style="overflow:hidden;height:2.5rem;"><span style="float: left;margin-left:5%;width: 5%;"><img src ="images/icons/UpRed@1x.png"/></span><span style="float: left;margin-left:2%;width: 80%;font-size: 1.3rem">Up, previously red</span></div>
+			</div>
+			<div style='margin-top: 0;display: inline-block; postion: relative;overflow:hidden;width:28%;float: left;'>
+				<div style="margin-bottom: 1rem;width:100%;font-weight: bold;">Employee metrics:</div>
+				<div style="overflow:hidden;height:3.5rem;"><span class="darkGreenicon" style="float: left;margin-right:3%;width: 15%;"><img src ="images/icons/Checkplusplus@1x.png"/></span><span style="float: left;margin-left:2%;width: 80%;font-size: 1.3rem">Best in class</span></div>
+				<div style="overflow:hidden;height:3.5rem;"><span class="Egreenicon" style="float: left;margin-right:3%;width: 15%;"><img src ="images/icons/Checkplus@1x.png"/></span><span style="float: left;margin-left:2%;width: 80%;font-size: 1.3rem">At or above target</span></div>
+				<div style="overflow:hidden;height:3.5rem;"><span class="lightGreenicon" style="float: left;margin-right:3%;width: 15%;"><img src ="images/icons/Check@1x.png"/></span><span style="float: left;margin-left:2%;width: 80%;font-size: 1.3rem">At or above IBM average</span></div>
+				<div style="overflow:hidden;height:3.5rem;"><span class="Eyellowicon" style="float: left;margin-right:3%;width: 15%;"></span><span style="float: left;margin-left:2%;width: 80%;font-size: 1.3rem">Approaching IBM average</span></div>
+				<div style="overflow:hidden;height:3.5rem;"><span class="pinkicon" style="float: left;margin-right:3%;width: 15%;"><img src ="images/icons/Exclamation@1x.png"/></span><span style="float: left;margin-left:2%;width: 80%;font-size: 1.3rem">Below IBM average</span></div>
+				<div style="overflow:hidden;height:3.5rem"><span class="Eredicon" style="float: left;margin-right:3%;width: 15%;"><img src ="images/icons/Exclamationminus@1x.png"/></span><span style="float: left;margin-left:2%;width: 80%;font-size: 1.3rem">Substantially below IBM average</span></div>
+			</div>
+			<!-- <div style='margin-top: 0; postion: relative;overflow:hidden;width:100%;float: left; font-weight: bold;'>
+				 WW & IOT metrics scoring is based on rounding to the nearest integer
+			</div> -->
+		</div>
+	</nav>
+	
+	
+	<div id='allcp' data-ng-if="setting.constituents.cp && setting.segmentation == 'allover'" class="marjar-block" data-ng-style="{width:additional? '100%' : '31%'}">
+		<div data-be-country-name="0" class="country-content" data-ng-if="data[0] && setting.constituents.cp && setting.segmentation == 'allover'" be-constituent="data[0]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[0] && setting.constituents.cp && setting.segmentation == 'allover'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="0" class="content"  be-constituent="data[0]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="0" class="title-content"  be-constituent="data[0]" is-additional="additional" be-data-setting='setting' data-be-title-name='allcp' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	</div>
+	<div id='ccamsscp' data-ng-if="setting.constituents.cp && setting.segmentation != 'allover'" class="marjar-block" data-ng-style="{width:additional? '100%' : '31%'}">
+		<div data-be-country-name="1" class="country-content" data-ng-if="data[1] && setting.constituents.cp && setting.segmentation == 'Cognitive'" be-constituent="data[1]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[1] && setting.constituents.cp && setting.segmentation == 'Cognitive'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="1" class="content"  be-constituent="data[1]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="1" class="title-content"  be-constituent="data[1]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamsscp' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	
+		<div data-be-country-name="2" class="country-content" data-ng-if="data[2] && setting.constituents.cp && setting.segmentation == 'Cloud'" be-constituent="data[2]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[2] && setting.constituents.cp && setting.segmentation == 'Cloud'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="2" class="content"  be-constituent="data[2]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="2" class="title-content"  be-constituent="data[2]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamsscp' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	
+		<div data-be-country-name="3" class="country-content" data-ng-if="data[3] && setting.constituents.cp && setting.segmentation == 'Analytics'" be-constituent="data[3]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[3] && setting.constituents.cp && setting.segmentation == 'Analytics'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="3" class="content"  be-constituent="data[3]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="3" class="title-content"  be-constituent="data[3]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamsscp' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	
+		<div data-be-country-name="4" class="country-content" data-ng-if="data[4] && setting.constituents.cp && setting.segmentation == 'Mobile'" be-constituent="data[4]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[4] && setting.constituents.cp && setting.segmentation == 'Mobile'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="4" class="content"  be-constituent="data[4]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="4" class="title-content"  be-constituent="data[4]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamsscp' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	
+		<div data-be-country-name="5" class="country-content" data-ng-if="data[5] && setting.constituents.cp && setting.segmentation == 'Social'" be-constituent="data[5]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[5] && setting.constituents.cp && setting.segmentation == 'Social'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="5" class="content"  be-constituent="data[5]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="5" class="title-content"  be-constituent="data[5]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamsscp' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	
+		<div data-be-country-name="6" class="country-content" data-ng-if="data[6] && setting.constituents.cp && setting.segmentation == 'Security'" be-constituent="data[6]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[6] && setting.constituents.cp && setting.segmentation == 'Security'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="6" class="content"   be-constituent="data[6]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="6" class="title-content"  be-constituent="data[6]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamsscp' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	</div>
+	<div id='allinfluencers' data-ng-if="setting.constituents.influencers && setting.segmentation == 'allover'" class="marjar-block" data-ng-style="{width:additional? '100%' : (!setting.constituents.cp ? '31%' : '23%')}">
+		<div data-be-country-name="7" class="country-content" data-ng-if="data[7] && setting.constituents.influencers && setting.segmentation == 'allover' && (additional || !setting.constituents.cp)" be-constituent="data[7]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[7] && setting.constituents.influencers && setting.segmentation == 'allover'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="7" class="content"  be-constituent="data[7]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="7" class="title-content"  be-constituent="data[7]" is-additional="additional" be-data-setting='setting' data-be-title-name='allinfluencers' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	</div>
+	<div id='ccamssinfluencers' data-ng-if="setting.constituents.influencers && setting.segmentation != 'allover'" class="marjar-block" data-ng-style="{width:additional? '100%' : (!setting.constituents.cp ? '31%' : '23%')}">
+		<div data-be-country-name="8" class="country-content" data-ng-if="data[8] && setting.constituents.influencers && setting.segmentation == 'Cognitive' && (additional || !setting.constituents.cp)" be-constituent="data[8]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[8] && setting.constituents.influencers && setting.segmentation == 'Cognitive'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="8" class="content"  be-constituent="data[8]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="8" class="title-content"  be-constituent="data[8]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamssinfluencers' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	
+		<div data-be-country-name="9" class="country-content" data-ng-if="data[9] && setting.constituents.influencers && setting.segmentation == 'Cloud' && (additional || !setting.constituents.cp)" be-constituent="data[9]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[9] && setting.constituents.influencers && setting.segmentation == 'Cloud'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="9" class="content"  be-constituent="data[9]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="9" class="title-content"  be-constituent="data[9]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamssinfluencers' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	
+		<div data-be-country-name="10" class="country-content" data-ng-if="data[10] && setting.constituents.influencers && setting.segmentation == 'Analytics' && (additional || !setting.constituents.cp)" be-constituent="data[10]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[10] && setting.constituents.influencers && setting.segmentation == 'Analytics'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="10" class="content" be-constituent="data[10]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="10" class="title-content" be-constituent="data[10]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamssinfluencers' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	
+		<div data-be-country-name="11" class="country-content" data-ng-if="data[11] && setting.constituents.influencers && setting.segmentation == 'Mobile' && (additional || !setting.constituents.cp)" be-constituent="data[11]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[11] && setting.constituents.influencers && setting.segmentation == 'Mobile'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="11" class="content"  be-constituent="data[11]" is-additional="additional" be-data-setting='setting'></div>
+		 	<div data-be-table-title="11" class="title-content"  be-constituent="data[11]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamssinfluencers' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	
+		<div data-be-country-name="12" class="country-content" data-ng-if="data[12] && setting.constituents.influencers && setting.segmentation == 'Social' && (additional || !setting.constituents.cp)" be-constituent="data[12]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[12] && setting.constituents.influencers && setting.segmentation == 'Social'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="12" class="content"  be-constituent="data[12]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="12" class="title-content"  be-constituent="data[12]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamssinfluencers' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	
+		<div data-be-country-name="13" class="country-content" data-ng-if="data[13] && setting.constituents.influencers && setting.segmentation == 'Security' && (additional || !setting.constituents.cp)" be-constituent="data[13]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[13] && setting.constituents.influencers && setting.segmentation == 'Security'" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="13" class="content"  be-constituent="data[13]" is-additional="additional" be-data-setting='setting'></div>
+		 	<div data-be-table-title="13" class="title-content"  be-constituent="data[13]" is-additional="additional" be-data-setting='setting' data-be-title-name='ccamssinfluencers' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	</div>
+	
+	<div id='developers' data-ng-if="setting.constituents.developers" class="marjar-block" data-ng-style="{width:additional? '100%' : (!setting.constituents.cp && !setting.constituents.influencers ? '31%' : '23%')}">
+		<div data-be-country-name="14" class="country-content" data-ng-if="data[14] && setting.constituents.developers && (additional || (!setting.constituents.cp && !setting.constituents.influencers))" be-constituent="data[14]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[14] && setting.constituents.developers" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="14" class="content"  be-constituent="data[14]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="14" class="title-content"  be-constituent="data[14]" is-additional="additional" be-data-setting='setting' data-be-title-name='developers' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	</div>
+	
+	<div id='employees' data-ng-if="setting.constituents.employees" class="marjar-block" data-ng-style="{width:additional? '100%' : (!setting.constituents.cp && !setting.constituents.influencers && !setting.constituents.developers ? '31%' : '23%')}">
+		<div data-be-country-name="15" class="country-content" data-ng-if="data[15] && setting.constituents.employees && (additional || (!setting.constituents.cp && !setting.constituents.influencers && !setting.constituents.developers))" be-constituent="data[15]" is-additional="additional" data-ng-style="{width:additional? '6%' : '22%'}"></div>
+		<div class="sub-block" data-ng-if="data[15] && setting.constituents.employees" data-ng-style="{width:additional? '94%' : '78%'}">
+			<div data-be-boxes-table="15" class="content"  be-constituent="data[15]" is-additional="additional" be-data-setting='setting'></div>
+			<div data-be-table-title="15" class="title-content"  be-constituent="data[15]" is-additional="additional" be-data-setting='setting' data-be-title-name='employees' data-ng-style="{width:additional? '100%' : '16%'}"></div>
+		</div>
+	</div>
+	</div>
+	<div id="backupDiv" style="display:block; padding-top:200px;"></div>
+	</div>
+</div>

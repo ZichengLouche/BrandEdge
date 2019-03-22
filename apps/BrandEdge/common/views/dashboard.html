@@ -1,0 +1,58 @@
+<div class="view-dashboard" style="height: 100%;">
+    <alert type="{{alert.type}}" ng-if="alert">{{alert.msg}}</alert>
+	<div data-dw-loading="loading" style="height: 100%;" data-dw-loading-options="$root.spinnerOptions">
+		<div class="donuts">
+			<div class="row" data-ng-repeat="rows in data">
+		  		<div class="col-lg-6" data-ng-repeat="donut in rows">
+		  			<div class="donut-label be-font-18 be-font-light" data-ng-class-even="'pull-right'">
+		  			<span>{{donut.label}}</span>
+		  			<!-- Grey out Employee Information -->
+		  			<span ng-if="donut.subLabel" class="be-font-10" style="white-space:nowrap"><br>{{donut.subLabel}}</span>
+		  			</div>
+		  			<div class="clearfix"></div>
+		  			<div 
+		  			  data-be-donut="d_{{$donut.index}}" 
+				      data-be-id="donut_{{donut.index}}" 
+				      data-be-data="donut" 
+				      data-be-config="config" 
+				      data-be-broadcast="true" 
+				      data-be-slice="{ donut: 'donut_0', slice: 'slice-0' }" 				      
+				      data-ng-class-even="'pull-right'"
+				      class="donut">
+		  			</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="donut-details pointer" data-ng-class="{ 'donut-details-border-left': borderLeft, 'donut-details-border-right': !borderLeft }" data-ng-if="donutDetailsShow" data-ng-click="onClickDetails(url)">
+            <div data-ng-class="borderLine"></div>
+            
+            <alert type="{{alertDetails.type}}" ng-if="alertDetails" style="margin-bottom: 0px;">{{alertDetails.msg}}</alert>
+            
+            <div data-ng-if="barChart || table.growthGapToMarket" style="overflow: hidden;">
+                <a class="icon {{ chartTitle.color | iconcheck: true }}" href="#" ></a><div data-be-title-tooltip data-be-description="chartTitle.icon" class="name be-font-16 be-font-bold">{{chartTitle.name}}</div><div class="value be-font-13 be-font-bold" data-ng-if="detailsValue && !table.growthGapToMarket">{{chartTitle.value|ranking}}</div>
+            </div>
+            <div style="width: 100%; min-height: 13rem; position: relative; margin-bottom: 1rem;"
+              data-ng-if="barChart"
+              id="bar-chart"
+			  data-be-chart
+			  data-be-type="bar" 
+			  data-be-data="chart" 
+			  data-be-config="chartConfig" 
+			  class="xchart">
+            </div>
+            
+            <data-be-table data-ng-if="table.growthGapToMarket" style="width: 100%; height: 80%;" 
+					data-be-data="table.growthGapToMarket" 
+					data-be-chart-value-key="">
+			</data-be-table>
+
+            <div x-data-ng-if="barChart" class="be-font-15 be-font-medium-italic" style="margin: 0rem 0 0.5rem 0.2rem;">Diagnostic drivers:</div>
+			<div class="row-details be-font-12" data-ng-repeat="row in details">
+				<a class="icon {{ row.color | iconcheck: true }}" href="#" ></a>
+				<div data-be-title-tooltip data-be-description="row.icon" class="name">{{row.name}}</div>
+				<div class="value" data-ng-if="detailsValue">{{row.value|ranking:row.code}}</div>
+			</div>
+		</div>
+	</div>
+</div>

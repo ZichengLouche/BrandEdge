@@ -1,0 +1,83 @@
+
+.be-table
+{
+   display: table;
+}
+
+.be-table > div
+{
+  display: table-row;
+  
+}
+
+.be-table > div > div
+{
+    position: relative;
+    display: table-cell;
+    padding: 2%;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+.be-table >  div:not(:first-child):not(:last-child) > div
+{
+  border: 1px solid #B1B1B1;
+}
+
+.be-table >  div > div > div
+{
+	position: relative;
+	display: inline-block;
+}
+
+.be-table >  div > div > div > div
+{
+    display: block;
+    font-family: HelvNeueBoldforIBM;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+.be-table > div:last-child > div
+{
+  border: 1px solid #B1B1B1;
+  border-top: 3px solid #B1B1B1;
+}
+
+.be-table > div:first-child > div
+{
+  background-color: #5897E3;
+  color: #ffffff;
+  font-family: HelvNeueBoldforIBM;
+  /*font-size: 1rem;*/
+}
+
+.be-alt > div:nth-child(2n):not(:last-child)
+{
+  background-color: #D8D8D8;
+  
+}
+
+.be-alt > div:nth-child(2n):not(:last-child) > div
+{
+  font-weight: bolder;
+}
+
+.be-alt > div:last-child > div
+{
+  border: 1px solid #B1B1B1;
+}
+
+.be-alt > div:nth-child(2n + 3) > div:nth-child(1)
+{
+	text-align: right;
+}
+
+.be-cem > div:nth-child(n + 2) > div:nth-child(1)
+{
+	background-color: #D8D8D8;
+}
+.be-table >  div > div > div.be-special-text
+{
+	color: red;
+}

@@ -1,0 +1,120 @@
+div.chart-grid > div.row:first-child > div:first-child {
+	
+}
+
+div.chart-cell {
+    display: block;
+    width: 100%;
+    height: 32rem;
+    position: relative;
+    padding: 0.7rem;
+}
+
+div.chart-container {
+	display: block;
+	border: 1px solid black;
+	border-radius: 4px;
+	box-shadow: 5px 5px 2px #aaaaaa;
+	text-align: left;
+	position: relative;
+}
+
+div.chart-container > div.chart {
+	width: 100%; 
+	height: 70%;
+}
+
+div.chart-container div.footer {
+    position: absolute;
+    x-border: 1px solid red;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 13%;
+    color: #ccccdd;
+}
+
+div.chart-container div.footer div.caption {
+    position: absolute;
+    display: block;
+    bottom: 1px;
+    left: 0.4rem;
+    color: #979797;
+}
+
+div.chart-container div.footer a.sort {
+    position: absolute;
+    display: block;
+}
+
+div.chart-container div.header {
+	width: 100%;
+	height:20%;
+	border-radius: 4px 4px 0 0;
+	position: relative;
+}
+
+div.chart-container div.header.dark, div.chart-grid > div.row:first-child > div.cell:first-child  div.chart-container div.header {
+	background-color: #87AFDB;
+	background-image: linear-gradient(-180deg, #7CC7FF 0%, #4178BE 100%);
+}
+
+div.chart-container div.header.light, div.chart-grid > div.row > div.cell  div.chart-container div.header {
+	background-color: #87AFDB;
+	background-image: linear-gradient(-180deg, #E0EAF7 0%, #779ACF 100%);
+}
+
+div.chart-container div.header div.title {
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -70%);
+    x-padding-right: 0.3rem;
+}
+
+div.chart-container div.header div.title  div.rating {
+	float: left;
+    margin: 0 0.2rem 0 0.2rem;
+    width: 6%;
+}
+
+div.chart-container div.header div.title  div.rating > img{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+div.chart-container div.header div.title  div.text {
+	float: left;
+    width: 90%;
+}
+
+div.chart-grid > div.row:first-child > div.cell:first-child  div.chart-container div.header div.title  div.text {
+	color: #ffffff;
+}
+
+div.chart-container div.header div.type {
+	position: absolute;
+	bottom: 0.2rem;
+	right: 0.4rem;
+	color: #ffffff;
+}
+
+div.chart-container div.header div.date {
+    position: absolute;
+    bottom: -1.4rem;
+    right: 0.4rem;
+    color: #ccccdd;
+}
+
+div.chart-container div.header div.previous {
+	position: absolute;
+	bottom: 0.2rem;
+	left: 6%;
+	color: #ffffff;
+	height: 25%;
+	width: 70%;
+}
+div.chart-container div.header div.previous div.rating > img {
+    width: 1.6rem;
+    height: 1.6rem;
+}

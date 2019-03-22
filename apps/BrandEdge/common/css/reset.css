@@ -1,0 +1,65 @@
+html, body {
+	margin: 0 auto;
+	width: 100%;
+	x-background-color: #eeeeee !important;	
+}
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+ 
+html { font-size: 1.4vmin; }
+body 
+{
+	font-family: HelvNeueRomanforIBM;	
+	font-weight: normal;
+	text-shadow: none;
+	color: #333;
+}
+
+body:before {
+    content: url('../images/icons/empl/green1@2x.png') url('../images/icons/empl/green2@2x.png') url('../images/icons/empl/green3@2x.png') url('../images/icons/empl/red1@2x.png') url('../images/icons/empl/red2@2x.png') url('../images/icons/empl/yellow@2x.png');
+    display: none;
+}
+
+@media (min-width: 1600px) {
+    .container {
+        x-width: 1570px;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        x-width: 1890px;
+        width: 90%;
+    }
+}
+
+.vertical-center{
+    display: block;
+    top: 50%;
+    transform: translate(0%, -50%);
+    position: absolute;
+}
+
+.be-hidden
+{
+	display: none !important;
+}
+
+.pointer{
+	cursor:pointer
+}
+
+div.container div.row.row-centered{
+	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+div.container div.row.row-centered div.col-lg-3{
+	float: none;
+	display: inline-block;
+}

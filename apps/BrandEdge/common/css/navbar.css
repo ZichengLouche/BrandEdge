@@ -1,0 +1,117 @@
+.nav li {
+    x-height: 5rem;
+    padding-top: 1.7rem;
+}
+
+.navbar-default .navbar-nav > .active > a{
+    color: #000;
+    font-weight: 900;
+    background-color: #f8f8f8;
+}
+
+.navbar-default .navbar-nav > .active > a{
+    position: relative;
+    outline: 0;
+}
+
+.navbar-default .navbar-nav > .active > a:after, .navbar-default .navbar-nav > .active > a:before {
+    bottom: -0px;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.navbar-default .navbar-nav > .active > a:before {
+    border-color: rgba(231, 231, 231, 0);
+    border-bottom-color: #e7e7e7;
+    border-width: 10px;
+    margin-left: -10px;
+}
+
+.navbar-default .navbar-nav > .active > a:after {
+    border-color: rgba(231, 202, 122, 0);
+    border-bottom-color: #ffffff;
+    border-width: 9px;
+    margin-left: -9px;
+    bottom: -1px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+    background-color: #f8f8f8;
+}
+
+.navbar-w3{
+    margin-bottom: 0;
+    border: 0;
+    background-image: linear-gradient(to bottom, #bdbdbd 0%, #868686 100%);
+    border-bottom: 1px solid #777;
+    border-top: 1px solid #f2f2f2;
+    height: 39px;
+}
+
+.navbar-w3 a .image-w3{
+    width: 43px;
+    height: 26px;
+    background: url(../images/w3_logos_sprite.png) 0 0;
+}
+
+.navbar-w3 a:hover .image-w3{
+    background: url(../images/w3_logos_sprite.png) no-repeat 0 -85px;
+}
+
+nav.navbar-default a.image-help{
+	width: 22px;
+    height: 22px;
+    background-image: url(../images/icons/helpicon@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 99%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+}
+
+nav.navbar-default span.image-calendar{
+	width: 22px;
+    height: 22px;
+    background-image: url(../images/icons/calendaricon@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 99%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-default .image-export{
+	width: 22px;
+    height: 22px;
+    background-image: url(../images/icons/export@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 99%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-footer{
+	background-color: #212327;
+	clear: both;
+	overflow:hidden;
+    border-top: 0px;
+    _margin-top: -20px;
+}
+
+.navbar-access {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 12px;
+  line-height: 20px;
+  color: white;
+}

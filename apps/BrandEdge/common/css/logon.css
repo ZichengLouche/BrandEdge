@@ -1,0 +1,183 @@
+div.login-view{
+	height:100%; 
+	background: linear-gradient(#004C81, #003E69);
+	background-repeat: no-repeat;
+    background-size: 100% 51%;
+    position: relative;
+}
+
+div.login-bottom{
+	height:50%; 
+	width: 100%;	
+	background-image: url('../images/login/MDI_primary_graphic.png'); 
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    z-index:-1;
+}
+
+div.login-view .table{
+	display: table;
+	table-layout: fixed;
+	width: 100%;	
+	height: 100%;
+}
+
+div.login-view .cell{
+	display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    width: 100%;	
+	height: 100%;
+}
+
+div.login-view div.login-box{
+	height: 35rem;
+    width: 60rem;
+    background-image: url('../images/login/new_login_box.png'); 
+    background-repeat: no-repeat;
+    background-size: 100% 99%;
+    border: 1px solid #303842;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+div.login-view div.login-box div.login-logo {
+	margin: 0 auto;
+	display: table;
+	height: 20%;
+	position: relative;
+}
+
+div.login-view div.login-box div.login-logo > div {
+    text-align: center;
+	width: 60%;
+	/* margin: 0 auto; */
+	background-color: white;
+	border-radius: 20px;
+	/* padding: 5%; */
+	/* height: 100%; */
+	display: table-cell;
+	vertical-align: middle;
+}
+
+div.login-view div.login-box div.login-logo span {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+div.login-view div.login-box div.login-form {
+    position: relative;
+	height: 80%;
+	x-border: 1px solid white;
+}
+
+div.login-view div.login-box div.login-form > form{
+	width: 60%;
+	height: 60%;
+	x-border: 1px solid red;
+	margin: 0 auto;
+	margin-top: 5%;
+}
+
+div.login-form form input.form-control {
+    background-color: #004A7E;
+    color: white;
+    border: 1px inset #6D7B93;
+    border-left: 0;
+    font-family: HelvNeueBoldforIBM;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    height: 1%;
+    x-padding: 3% 3% 2% 3%;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+div.login-form form span.input-group-addon
+{
+	background-color: #003E68;
+    color: #6B7B92;
+    border: 1px inset #6D7B93;
+    border-right: 0;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    x-line-height: 1;
+    x-height: 1%;
+    x-padding: 3% 3% 2% 3%;
+}
+
+div.login-form form input::-webkit-input-placeholder { /* WebKit browsers */
+    color: #888888;
+    font-style: italic;
+}
+div.login-form form input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #888888;
+    opacity: 1;
+    font-style: italic;
+}
+div.login-form form input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #888888;
+    opacity: 1;
+    font-style: italic;
+}
+div.login-form form input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #888888;
+    font-style: italic;
+}
+
+div.login-form form input[type=checkbox] {
+  /* All browsers except webkit*/
+  transform: scale(2.5);
+
+  /* Webkit browsers*/
+  -webkit-transform: scale(2.5);
+}
+
+
+
+div.login-form form button.login-button
+{
+    background-color: #9CCD29;
+    margin: 0 auto;
+    border-radius: 12px;
+    line-height: 2;
+    text-align: center;
+    width: 100%;
+    border: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #9CCD29 #9CCD29 #B4D36F #9CCD29;
+    color: white;
+    font-family: HelvNeueBoldforIBM;
+    font-size: 2rem;
+    text-shadow: 1px 1px #555555;
+    box-shadow: 1px 6px 1px #759A1D;
+}
+
+div.login-form form div.logon-terms
+{
+    text-align: center;
+    margin: 3%;
+    color: white;
+    font-family: HelvNeueLightforIBM;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+div.login-form form div.logon-terms input
+{
+	width: 1rem;
+	height: 1rem;
+    font-size: 2rem;
+}
+
+
+
+.login-alerts
+{
+	height: 4%;
+	line-height: 0.9;
+	margin: 3%;
+}

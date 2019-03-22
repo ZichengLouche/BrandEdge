@@ -1,0 +1,58 @@
+div.terms
+{
+    padding: 5%;
+}
+
+div.terms > .termTitle
+{
+	font-family: HelvNeueBoldforIBM;
+	font-size: 1.8rem;
+}
+
+div.terms > .termText
+{
+	font-family: HelvNeueLightforIBM;
+	font-size: 1.4rem;
+}
+
+div.terms > .termsClose
+{
+	text-align: center;
+}
+
+div.terms > .termsSupport
+{
+	text-align: center;
+}
+
+div.termsClose > button.accept-button
+{
+	border: 3px solid #49729A;
+	color: #19385D;
+	padding: 2% 4%;
+	font-family: HelvNeueLightforIBM;
+	font-size: 1.8rem;
+	background-color: transparent;
+}
+
+div.termsClose > button.accept-button > .bold-text
+{
+	font-family: HelvNeueBoldforIBM;
+	font-size: 1.8rem;
+}
+
+div.termsSupport > button.accept-button
+{
+	border: 3px solid #49729A;
+	color: #ffffff;
+	padding: 0% 7%;
+	font-family: HelvNeueLightforIBM;
+	font-size: 1rem;
+	background-color: #6296C7;
+}
+
+div.termsSupport > button.accept-button > .bold-text
+{
+	font-family: HelvNeueBoldforIBM;
+	font-size: 1rem;
+}

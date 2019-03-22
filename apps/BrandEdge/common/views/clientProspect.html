@@ -1,0 +1,17 @@
+<div style="text-align: center;" data-ng-if="stateCheck()">
+	<data-be-table-tab 	data-be-text="Market View,CCAMSS,IT/LOB,Clients/Prospects"  data-be-id="CPDashboardMenu" data-be-click="cpMenuTableClick" data-be-init-item="{{showCamss}}"> </data-be-table-tab>
+</div>
+
+<div id="clientProspectId" style="text-align: center;" data-ng-if="!stateCheck()">
+	<data-be-table-tab 	data-be-text="Market View,Category,Buyer Type,Clients,Prospects" data-be-id="CPFilterMenu"  data-be-click="topTableClick" data-be-init-item="{{chartFilter}}" 
+		data-be-sub-text='{"Category":[{"name":"Cognitive","icon":"Cognitive"},{"name":"Cloud","icon":"Cloud"},{"name":"Analytics","icon":"Analytics"},{"name":"Mobile","icon":"Mobile"},{"name":"Social","icon":"Social"},{"name":"Security","icon":"Security"}],"Buyer Type":[{"name":"IT"},{"name":"LOB"}]}' >
+	</data-be-table-tab>
+	
+	<br/>
+	
+	<data-be-table-tab  data-be-text="Belief,Action,Advocacy" data-be-id="BAAMenu" data-be-click="tableClick" data-be-init-item="{{ initItem() }}"> </data-be-table-tab>
+</div>
+
+<div class="x-container">
+	<div data-ui-view></div>
+</div>
